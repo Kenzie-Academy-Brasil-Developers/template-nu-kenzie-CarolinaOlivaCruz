@@ -1,0 +1,63 @@
+
+.App-Header {
+  width: 100%;
+  height: 88px;
+  background-color: #f8f9fa;
+}
+
+.Container-Header {
+  width: 80%;
+  margin: 0 auto;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.App-Main {
+  width: 80%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.Container-Form {
+  width: 363px;
+}
+
+.Container-Form-Submit {
+  height: 351px;
+  padding: 20px;
+  border: 2px solid gray;
+}
+
+.Container-Total {
+  height: 96px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid gray;
+}
+
+.Container-List {
+  width: 560px;
+  height: 627px;
+  padding: 20px;
+  border: 2px solid gray;
+}
+
+.Container-Form-Submit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.Container-Form-Submit input, select {
+  padding: 10px;
+  display: flex;
+}
+
+.Container-Form-Submit button {
+  width: 100%;
+}
