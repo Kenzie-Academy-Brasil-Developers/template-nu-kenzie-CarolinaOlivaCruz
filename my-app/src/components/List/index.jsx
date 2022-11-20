@@ -19,10 +19,10 @@ export const List = ({ listTransactions, filterCards, functionDeleteCard }) => {
             Entradas
           </button>
           <button
-            value="saída"
+            value="despesa"
             onClick={(event) => filterCards(event.target.value)}
           >
-            Saídas
+            Despesas
           </button>
         </nav>
       </div>

@@ -29,6 +29,7 @@
   height: 351px;
   padding: 20px;
   border: 2px solid var(--color-grey-2);
+  border-radius: 4px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -92,6 +93,7 @@ select {
   margin-top: 20px;
   padding: 20px;
   border: 2px solid var(--color-grey-2);
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -139,7 +141,6 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  
 }
 
 .card-div-value-button {
@@ -149,7 +150,6 @@ select {
   align-items: flex-start;
   gap: 50px;
 }
-
 
 .card-div-value-button button {
   padding: 5px 10px;

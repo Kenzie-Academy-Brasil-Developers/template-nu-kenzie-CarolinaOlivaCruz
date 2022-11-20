@@ -5,6 +5,14 @@ import "./styles/globalStyles.css";
 import "./styles/button.css";
 import { transactionsData } from "./data/data";
 
+
+// Detalhes que faltam:
+// css responsivo
+// backgroud-color pages usando useState
+// corrigir bug filter
+// corrigir bug render de cards novos e delete
+
+
 export function App() {
   const [listTransactions, setListTransactions] = useState(transactionsData);
 
@@ -36,13 +44,13 @@ export function App() {
   );
 
   const [isHome, setIsHome] = useState(true);
-  const togglePage = () => (isHome ? setIsHome(false): setIsHome(true));
-  
+  const togglePage = () => (isHome ? setIsHome(false) : setIsHome(true));
+
   return (
     <div className="App">
       {isHome ? (
         <Home>
-          <button type="button" className="ButtonGo" onClick={togglePage}>
+          <button type="button" className="button-go" onClick={togglePage}>
             Iniciar
           </button>
         </Home>
@@ -55,7 +63,11 @@ export function App() {
           filterCards={filterCards}
           contador={contador}
         >
-          <button type="button" className="ButtonComeBack" onClick={togglePage}>
+          <button
+            type="button"
+            className="button-come-back"
+            onClick={togglePage}
+          >
             Início
           </button>
         </Dashboard>
@@ -65,8 +77,3 @@ export function App() {
 }
 
 
-// Detalhes que faltam:
-// css
-// backgroud-color pages
-// bug filter
-// bug render de cards novos e delete

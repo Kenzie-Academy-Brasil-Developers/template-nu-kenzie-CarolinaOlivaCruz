@@ -6,7 +6,7 @@ export const transactionsData = [
   },
   {
     description: "Conta de luz",
-    type: "saída",
+    type: "despesa",
     value: -150,
   },
 ];
