@@ -44,6 +44,7 @@ select {
   border-radius: 8px;
   background-color: var(--color-grey-2);
   display: flex;
+  outline: none;
 }
 
 .div-form-description {
