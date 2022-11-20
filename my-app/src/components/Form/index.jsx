@@ -18,8 +18,8 @@ export const Form = ({ functionAddCard, functionDeleteCard }) => {
   };
 
   return (
-    <form onSubmit={submit} className="Container-Form-Submit">
-      <div className="Form-Description">
+    <form onSubmit={submit} className="container-form-submit">
+      <div className="div-form-description">
         <label htmlFor="">Descrição</label>
         <input
           type="text"
@@ -31,7 +31,7 @@ export const Form = ({ functionAddCard, functionDeleteCard }) => {
         ></input>
         <p>Ex: Compra de roupas</p>
       </div>
-      <div>
+      <div className="div-input-value">
         <label htmlFor="">Valor</label>
         <input
           type="text"
@@ -39,10 +39,10 @@ export const Form = ({ functionAddCard, functionDeleteCard }) => {
           onChange={(event) =>
             setFormData({ ...formData, value: parseInt(event.target.value) })
           }
-          placeholder="00,00"
+          placeholder="1"
         ></input>
       </div>
-      <div>
+      <div className="form-select">
         <label htmlFor="">Tipo de valor</label>
         <select
           defaultValue={formData.type}

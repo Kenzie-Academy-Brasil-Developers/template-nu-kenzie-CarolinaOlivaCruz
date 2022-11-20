@@ -4,8 +4,8 @@ import "./style.css"
 
 export const Home = ({children}) => {
   return (
-    <>
-      <section>
+    <div className="page-home">
+      <section className="section-description-app">
         <img src={logo} className="App-logo" alt="logo" />
         <div>
           <h1>Centralize o controle das suas finanças</h1>
@@ -16,6 +16,6 @@ export const Home = ({children}) => {
       <section>
       <img src={imgPrincipal} className="App-logo" alt="logo" />
       </section>
-    </>
+    </div>
   );
 };

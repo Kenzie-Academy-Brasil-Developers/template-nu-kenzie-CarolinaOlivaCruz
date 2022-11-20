@@ -1,12 +1,12 @@
-
-.App-Header {
+.app-header {
   width: 100%;
   height: 88px;
   background-color: #f8f9fa;
+  box-shadow: 0 5px 15px var(--color-grey-3);
 }
 
-.Container-Header {
-  width: 80%;
+.container-header {
+  width: 75%;
   margin: 0 auto;
   padding: 25px;
   display: flex;
@@ -14,50 +14,146 @@
   align-items: center;
 }
 
-.App-Main {
-  width: 80%;
+.app-main {
+  width: 75%;
   margin: 30px auto;
   display: flex;
   justify-content: space-between;
- 
 }
 
-.Container-Form {
+.container-form {
   width: 363px;
 }
 
-.Container-Form-Submit {
+.container-form-submit {
   height: 351px;
   padding: 20px;
-  border: 2px solid gray;
-}
-
-.Container-Total {
-  height: 96px;
-  margin-top: 20px;
-  padding: 20px;
-  border: 2px solid gray;
-}
-
-.Container-List {
-  width: 560px;
-  height: 627px;
-  padding: 20px;
-  border: 2px solid gray;
-}
-
-.Container-Form-Submit {
+  border: 2px solid var(--color-grey-2);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
+  align-content: space-between;
+  justify-content: space-between;
 }
 
-.Container-Form-Submit input, select {
-  padding: 10px;
+.container-form-submit input,
+select {
+  height: 48px;
+  border: 0;
+  border-radius: 8px;
+  background-color: var(--color-grey-2);
   display: flex;
 }
 
-.Container-Form-Submit button {
+.div-form-description {
+  margin-top: 20px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.div-form-description input {
+  width: 95%;
+  padding: 0 10px;
+}
+
+.div-form-description input::placeholder {
+  color: var(--color-grey-4);
+  font-size: 16px;
+}
+
+.div-input-value {
+  width: 128px;
+}
+
+.div-input-value input {
+  width: 90%;
+  padding: 0 10px;
+}
+
+.div-input-value input::placeholder {
+  color: var(--color-grey-4);
+  font-size: 16px;
+}
+
+.form-select {
+  width: 150px;
+}
+
+.form-select select {
+  width: 100%;
+  padding: 0 15px;
+  color: var(--color-grey-4);
+}
+
+.container-total {
+  height: 96px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid var(--color-grey-2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container-total h3 {
+  margin-top: 15px;
+}
+
+.container-total span {
+  margin-left: 150px;
+  color: var(--color-primary);
+}
+
+.container-list {
+  width: 560px;
+  height: 627px;
+  padding: 20px 0;
+}
+
+.container-button-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-list-cards {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.container-list-cards li {
+  height: 87px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-grey-2);
+  border-left: 5px solid var(--color-grey-3);
+  border-radius: 4px;
+}
+
+.card-div-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+
+.card-div-value-button {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+
+.card-div-value-button button {
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 4px;
+  background-color: var(--color-grey-3);
 }

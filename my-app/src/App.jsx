@@ -36,13 +36,13 @@ export function App() {
   );
 
   const [isHome, setIsHome] = useState(true);
-  const togglePage = () => (isHome ? setIsHome(false) : setIsHome(true));
-
+  const togglePage = () => (isHome ? setIsHome(false): setIsHome(true));
+  
   return (
     <div className="App">
       {isHome ? (
         <Home>
-          <button type="button" onClick={togglePage}>
+          <button type="button" className="ButtonGo" onClick={togglePage}>
             Iniciar
           </button>
         </Home>
@@ -63,3 +63,10 @@ export function App() {
     </div>
   );
 }
+
+
+// Detalhes que faltam:
+// css
+// backgroud-color pages
+// bug filter
+// bug render de cards novos e delete
