@@ -158,3 +158,8 @@ select {
   border-radius: 4px;
   background-color: var(--color-grey-3);
 }
+
+.card-div-value-button button:hover {
+  color: var(--color-grey-1);
+  background-color: var(--color-grey-4);
+}
