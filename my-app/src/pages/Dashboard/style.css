@@ -47,6 +47,16 @@ select {
   outline: none;
 }
 
+.container-form-submit input:hover, select:hover { 
+  outline: 1px solid var(--color-grey-4);
+  background-color: var(--color-grey-3);
+}
+
+.container-form-submit input::placeholder {
+  color: var(--color-grey-4);
+  font-size: 16px;
+}
+
 .div-form-description {
   margin-top: 20px;
   width: 100%;
@@ -60,11 +70,6 @@ select {
   padding: 0 10px;
 }
 
-.div-form-description input::placeholder {
-  color: var(--color-grey-4);
-  font-size: 16px;
-}
-
 .div-input-value {
   width: 128px;
 }
@@ -72,11 +77,6 @@ select {
 .div-input-value input {
   width: 90%;
   padding: 0 10px;
-}
-
-.div-input-value input::placeholder {
-  color: var(--color-grey-4);
-  font-size: 16px;
 }
 
 .form-select {
