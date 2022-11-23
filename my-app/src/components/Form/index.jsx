@@ -1,20 +1,23 @@
 import { useState } from "react";
 
-export const Form = ({ functionAddCard, functionDeleteCard }) => {
+export const Form = ({ functionAddCard }) => {
+  const [type, setType] = useState("Entrada");
   const [formData, setFormData] = useState({
     description: "",
-    type: "Entrada",
+    type: type,
     value: "",
   });
 
   const submit = (event) => {
     event.preventDefault();
-    functionAddCard(formData);
-    setFormData({
-      description: "",
-      type: "Entrada",
-      value: "",
-    });
+    if (formData.description !== "" && formData.value !== "") {
+      functionAddCard(formData);
+      setFormData({
+        description: "",
+        type: type,
+        value: "",
+      });
+    }
   };
 
   return (
@@ -46,7 +49,7 @@ export const Form = ({ functionAddCard, functionDeleteCard }) => {
         <label htmlFor="">Tipo de valor</label>
         <select
           defaultValue={formData.type}
-          onChange={(event) => ({ ...formData, type: event.target.value })}
+          onChange={(event) => setType(event.target.value)}
         >
           <option value="Entrada">Entrada</option>
           <option value="Saída">Saída</option>

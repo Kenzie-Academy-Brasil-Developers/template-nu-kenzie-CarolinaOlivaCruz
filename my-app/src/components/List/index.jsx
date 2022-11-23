@@ -1,6 +1,6 @@
 import { Cards } from "./Cards";
 
-export const List = ({ listTransactions, filterCards, functionDeleteCard }) => {
+export const List = ({ filter, filterCards, functionDeleteCard }) => {
   return (
     <>
       <div className="container-button-nav">
@@ -28,7 +28,7 @@ export const List = ({ listTransactions, filterCards, functionDeleteCard }) => {
       </div>
       <div>
         <ul className="container-list-cards">
-          {listTransactions.map((transaction, index) => (
+          {filter.map((transaction, index) => (
             <Cards
               key={index}
               transaction={transaction}

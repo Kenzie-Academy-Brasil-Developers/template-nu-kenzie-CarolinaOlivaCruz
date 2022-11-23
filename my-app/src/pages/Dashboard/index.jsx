@@ -2,11 +2,11 @@ import { Form } from "../../components/Form";
 import { TotalMoney } from "../../components/TotalMoney";
 import { List } from "../../components/List";
 import logo from "../../assets/logo-dashboard.svg";
-import "./style.css"
+import "./style.css";
 
 export const Dashboard = ({
   children,
-  listTransactions,
+  filter,
   functionAddCard,
   functionDeleteCard,
   filterCards,
@@ -22,12 +22,12 @@ export const Dashboard = ({
       </header>
       <main className="app-main">
         <section className="container-form">
-          <Form functionAddCard={functionAddCard} />
+          <Form functionAddCard={functionAddCard}/>
           <TotalMoney contador={contador} />
         </section>
         <section className="container-list">
           <List
-            listTransactions={listTransactions}
+            filter={filter}
             filterCards={filterCards}
             functionDeleteCard={functionDeleteCard}
           />

@@ -6,7 +6,7 @@ export const Home = ({children}) => {
   return (
     <div className="page-home">
       <section className="section-description-app">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="app-logo" alt="logo" />
         <div>
           <h1>Centralize o controle das suas finanças</h1>
           <p>de forma rápida e segura</p>
@@ -14,7 +14,7 @@ export const Home = ({children}) => {
         </div>
       </section>
       <section>
-      <img src={imgPrincipal} className="App-logo" alt="logo" />
+      <img src={imgPrincipal} className="app-img-home" alt="logo" />
       </section>
     </div>
   );

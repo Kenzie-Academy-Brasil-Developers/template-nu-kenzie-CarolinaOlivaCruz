@@ -3,51 +3,55 @@ import { Dashboard } from "./pages/Dashboard";
 import { Home } from "./pages/Home/Home";
 import "./styles/globalStyles.css";
 import "./styles/button.css";
-import { transactionsData } from "./data/data";
-
 
 // Detalhes que faltam:
 // css responsivo
-// backgroud-color pages usando useState
-// corrigir bug filter
-// corrigir bug render de cards novos e delete
-
 
 export function App() {
-  const [listTransactions, setListTransactions] = useState(transactionsData);
+  const [listTransactions, setListTransactions] = useState([]);
+  const [filter, setFilter] = useState(listTransactions);
 
   const addTransaction = (transactionData) => {
-    setListTransactions([...listTransactions, transactionData]);
+    const data = {
+      ...transactionData,
+      id: listTransactions.length,
+    };
+    setListTransactions([...listTransactions, data]);
+    setFilter([...listTransactions, data]);
   };
 
-  const deleteTransaction = (transactionDescription) => {
+  const deleteTransaction = (id) => {
     const newList = listTransactions.filter(
-      (transaction) => transaction.description !== transactionDescription
+      (transaction) => transaction.id !== id
     );
     setListTransactions(newList);
+    setFilter(newList);
   };
 
   const filterCards = (buttonValue) => {
     if (buttonValue === "todos") {
-      setListTransactions(listTransactions);
+      setFilter(listTransactions);
     } else {
       const filterButton = listTransactions.filter(
-        (element) => element.type === buttonValue
+        (element) => element.type.toLowerCase() === buttonValue.toLowerCase()
       );
-      setListTransactions(filterButton);
+      setFilter(filterButton);
     }
   };
 
-  const contador = listTransactions.reduce(
-    (accumulator, currentValue) => accumulator + currentValue.value,
-    0
-  );
+  const contador = listTransactions.reduce((accumulator, currentValue) => {
+    if (currentValue.type === "Entrada") {
+      return accumulator + currentValue.value;
+    } else {
+      return accumulator - currentValue.value;
+    }
+  }, 0);
 
   const [isHome, setIsHome] = useState(true);
   const togglePage = () => (isHome ? setIsHome(false) : setIsHome(true));
 
   return (
-    <div className="App">
+    <div>
       {isHome ? (
         <Home>
           <button type="button" className="button-go" onClick={togglePage}>
@@ -57,7 +61,7 @@ export function App() {
       ) : (
         <Dashboard
           listTransactions={listTransactions}
-          setListTransactions={setListTransactions}
+          filter={filter}
           functionAddCard={addTransaction}
           functionDeleteCard={deleteTransaction}
           filterCards={filterCards}
@@ -75,5 +79,3 @@ export function App() {
     </div>
   );
 }
-
-

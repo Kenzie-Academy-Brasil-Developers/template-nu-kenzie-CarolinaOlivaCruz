@@ -1,16 +1,15 @@
 .page-home {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: var(--color-grey-5);
-    color: var(--color-grey-1);
-    padding: 30px 200px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--color-grey-5);
+  color: var(--color-grey-1);
+  padding: 30px 200px;
 }
 
-.section-description-app div{
-    margin-top: 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
+.section-description-app div {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
-

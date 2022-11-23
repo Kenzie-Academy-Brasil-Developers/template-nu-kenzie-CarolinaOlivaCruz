@@ -2,7 +2,7 @@ import iconDelete from "../../../assets/icon-delete.svg"
 
 
 export const Cards = ({ transaction, functionDeleteCard }) => {
-  const { description, type, value } = transaction;
+  const { description, type, value, id } = transaction;
 
   return (
     <li>
@@ -12,7 +12,7 @@ export const Cards = ({ transaction, functionDeleteCard }) => {
       </div>
       <div className="card-div-value-button">
         <p>R$ {value}</p>
-        <button onClick={() => functionDeleteCard(description)}>
+        <button id={id} onClick={() => functionDeleteCard(id)}>
           <img src={iconDelete} alt="lixeira" />
         </button>
       </div>
